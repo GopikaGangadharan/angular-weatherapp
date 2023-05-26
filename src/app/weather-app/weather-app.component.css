@@ -1,0 +1,26 @@
+/* .container{
+    
+    width: 100%;background-image: url('https://www.surfertoday.com/images/stories/clouds.jpg');
+    height: 100%;
+} */
+
+button{
+position: absolute;
+    border: none;
+   background: none;
+margin-left: 750px;
+margin-top: -30px;
+}
+.searchbar input{
+border-radius: 50px;
+background: none;
+width: 500px;
+margin-left: 300px;
+}
+.item{
+    background-color: white;
+    margin-left: 350px;
+    margin-top: 30px;
+    border-radius: 20px;
+    
+}

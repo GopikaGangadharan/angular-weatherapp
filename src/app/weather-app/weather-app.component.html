@@ -1,0 +1,49 @@
+
+<div class="container">
+
+
+    
+    <div style="background-image: url('https://cdn.pixabay.com/photo/2019/05/19/23/47/clouds-4215608_640.jpg'); height: 600px; width: 100%;background-repeat: no-repeat;background-size: cover;">
+
+
+    
+<!-- <img [src]="weatherImage" alt=""> -->
+   
+    <div class="searchbar  ">
+        <div class="header"> 
+        
+        <h2 class="mt-5 text-center">WEATHER - INFO</h2>
+
+        <input [(ngModel)]="city"
+        class="form-control mt-5" style="margin-left: 25rem;" type="text" placeholder="  search your locality" >
+       <button (click)="getWeatherDetails()" type="button"><i class="fa-solid fa-magnifying-glass" style="margin-left: 6rem;"></i></button> 
+
+       <div *ngIf="weatherData">
+       <div class="item bg-light p-2 text-dark bg-opacity-25" style="width: 400px; height: 350px;
+       margin-left: 28rem;">
+        <h4 class="justify-content-center"><img src="https://static.vecteezy.com/system/resources/previews/009/589/758/original/location-location-pin-location-icon-transparent-free-png.png"
+            width="40px" style="margin-top: 30px;margin-left: 10rem;" alt=""> <br> <span style="margin-left: 8rem;"> {{weatherData.name}},{{weatherData.sys.country}}</span></h4>
+
+        <h5 style="margin-left:9rem;">{{weatherData.weather[0].description}}</h5>
+
+
+        <h6><img src="https://static.vecteezy.com/system/resources/previews/011/619/153/original/temperature-3d-render-icon-illustration-png.png"
+            width="30px" style="margin-top: 5px;margin-left: 8rem;" alt=""> 
+             {{weatherData.main.temp}}<span><sup>o</sup>C</span></h6>
+
+        <h6><img src="https://cdn-icons-png.flaticon.com/512/4005/4005754.png" 
+            width="30px" style="margin-top: 8px;margin-left: 8rem;"  alt=""> 
+             {{weatherData.main.humidity}}<span>%</span></h6> 
+
+        <h6><img src="https://cdn.iconscout.com/icon/free/png-128/windsock-1671449-1422428.png"
+                width="30px" style="margin-top: 8px;margin-left: 8rem;" alt=""> 
+                {{weatherData.wind.speed}} <span>Km/h</span> </h6> 
+
+        <h6><img src="https://cdn-icons-png.flaticon.com/512/2105/2105225.png"
+            width="30px" style="margin-top: 8px;margin-left: 8rem;" alt=""> 
+           {{weatherData.main.pressure}} <span>hPa</span> </h6>      
+       </div>
+    </div>
+    </div>
+</div>
+</div>
